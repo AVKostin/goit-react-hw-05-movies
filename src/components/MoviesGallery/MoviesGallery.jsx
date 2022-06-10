@@ -24,8 +24,10 @@ MoviesGallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      posterPath: PropTypes.string,
+      poster_path: PropTypes.string,
       genres: PropTypes.string,
+      release_date: PropTypes.number.isRequired,
+      vote_average: PropTypes.number.isRequired,
     })
   ),
 };
