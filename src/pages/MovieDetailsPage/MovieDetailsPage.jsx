@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Outlet, useParams } from "react-router-dom";
-import MovieDetails from "components/MovieDetails";
+import { MovieDetails } from "components/MovieDetails";
 import Container from "UI/container";
 import Section from "UI/section";
 import MovieDetailsNavigation from "components/MovieDetailsNavigation";
