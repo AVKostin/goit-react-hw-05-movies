@@ -1,42 +1,53 @@
 import PropTypes from "prop-types";
+import { Outlet } from 'react-router-dom';
 import noPoster from "../Cast/CastItem/No-photo-m.png";
-// import MovieDetailsNavigation from '../MovieDetailsNavigation/MovieDetailsNavigation';
 
 import {
   Wrapper,
   Thumb,
   Information,
   Title,
-  Subtitle,
-  BlockTitle,
-  Paragraph,
-} from "./MovieDetails.styled";
+  Details,
+  Table,
+  Head,
+  Data,
+  Rating,
+  RatingAccent,
+  AboutSubtitle,
+  Overview,
+ } from "./MovieDetails.styled";
 
-const MovieDetails = ({
-  title,
+export const MovieDetails = ({
   quote,
-  release,
-  overview,
+  title,
   genres,
-  posterPath,
+  overview,
+  vote_count,
+  popularity,
+  poster_path,
+  vote_average,
+  release_date,
+  backdrop_path,
+  original_title,
 }) => {
   return (
+<>
     <Wrapper>
       <Thumb>
-        {posterPath !== null ? (
+        {poster_path !== null ? (
           <picture>
             <source
-              srcSet={`https://themoviedb.org/t/p/w500${posterPath}`}
+              srcSet={`https://themoviedb.org/t/p/w500${poster_path}`}
               media="(min-width: 1024px)"
             />
             <source
-              srcSet={`https://themoviedb.org/t/p/w342${posterPath}`}
+              srcSet={`https://themoviedb.org/t/p/w342${poster_path}`}
               media="(min-width: 768px)"
             />
             <img
               alt={title}
               loading="lazy"
-              src={`https://themoviedb.org/t/p/w342${posterPath}`}
+              src={`https://themoviedb.org/t/p/w342${backdrop_path}`}
             />
           </picture>
         ) : (
@@ -44,35 +55,56 @@ const MovieDetails = ({
         )}
       </Thumb>
 
-      <Information>
-        <Title>{title}</Title>
-        <Subtitle>{quote}</Subtitle>
+         <Details>
+          <Title>{title}</Title>
+          <Information>
+          <Table>
+            <tbody>
+              <tr>
+                <Head>Vote / Votes:</Head>
+                <Data>
+                  <Rating>{vote_average}</Rating> /{' '}
+                  <RatingAccent>{vote_count}</RatingAccent>
+                </Data>
+              </tr>
+              <tr>
+                <Head>Popularity:</Head>
+                <Data>{popularity}</Data>
+              </tr>
+              <tr>
+                <Head>Original title</Head>
+                <Data>{original_title}</Data>
+              </tr>
+              <tr>
+                <Head>Release date:</Head>
+                <Data>{release_date}</Data>
+              </tr>
+              <tr>
+                <Head>Genre:</Head>
+                <Data>
+                {genres ? genres : 'No genres'}
+                </Data>
+              </tr>
+            </tbody>
+        </Table>
+        </Information>
+          <AboutSubtitle>About</AboutSubtitle>
+          <Overview>{overview}</Overview>
+        </Details>
+      </Wrapper>
 
-        <BlockTitle>Release</BlockTitle>
-        {release === Number ? (
-          <Paragraph>{release}</Paragraph>
-        ) : (
-          <Paragraph></Paragraph>
-        )}
 
-        <BlockTitle>Genres</BlockTitle>
-        <Paragraph>{genres}</Paragraph>
-
-        <BlockTitle>Overview</BlockTitle>
-        <Paragraph>{overview}</Paragraph>
-        {/* <MovieDetailsNavigation /> */}
-      </Information>
-    </Wrapper>
+      <Outlet />
+</>
   );
 };
 
 MovieDetails.propTypes = {
   title: PropTypes.string.isRequired,
   quote: PropTypes.string.isRequired,
-  release: PropTypes.number,
+  release_date: PropTypes.number,
   overview: PropTypes.string,
   genres: PropTypes.string,
-  posterPath: PropTypes.string,
+  poster_path: PropTypes.string,
 };
 
-export default MovieDetails;
