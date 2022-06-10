@@ -25,10 +25,10 @@ export const AuthorName = styled.span`
 
 export const Text = styled.p`
   color: ${(p) => p.theme.lightBG};
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.6;
-  padding: 0 20px 10px 20px;
+  line-height: 1.2;
+  padding: 0 10px 10px 10px;
     text-align: justify;
   font-family: "Comfortaa", sans-serif;
     @media ${breakpoints.laptop} {
