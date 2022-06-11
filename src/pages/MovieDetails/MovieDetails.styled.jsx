@@ -60,6 +60,12 @@ export const Title = styled.h2`
 export const CardsDescription = styled.div`
 height: 60px;
 background-color: ${(p) => p.theme.cardBGColor};
+
+
+  padding-top: 10px;
+  height: 80px;
+
+
 `;
 
 export const Details = styled.div`
@@ -104,17 +110,24 @@ export const Rating = styled.span`
   letter-spacing: 0;
 `;
 
+export const RatingCards = styled.span`
+ display: flex;
+  align-items: top;
+  justify-content: space-between;
+
+`
+
+
 export const RatingAccent = styled.span`
-  padding: 1px 10px;
+  padding: 5px 10px;
+  margin-right: 5px;
   color: #000;
   background-color: #f7f7f7;
   border-radius: 5px;
-
   font-weight: 500;
   font-size: 15px;
   line-height: 1.1666666667;
   letter-spacing: 0;
-
   color: #fff;
   background-color: #ff6b08;
 `;
