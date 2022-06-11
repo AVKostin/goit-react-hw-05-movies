@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, Outlet, useParams } from "react-router-dom";
-import { MovieDetails } from "components/MovieDetails";
-import Container from "UI/container";
+import Cast from "../Cast";
+import Reviews from "../Reviews";
 import Section from "UI/section";
-import MovieDetailsNavigation from "components/MovieDetailsNavigation";
-import Cast from "components/Cast";
-import Reviews from "components/Reviews";
-import Trailers from "components/Trailer";
-import NavigateBackButton from "components/NavigateBackButton";
-import { movieDetails } from "utils/movieDetails";
+import Trailers from "../Trailer";
+import Container from "UI/container";
+import { MovieDetailsItem } from "utils/movieDetailsItem";
 import { fetchFilmDetails } from "Services/movieApi";
+import { MovieDetails } from "../../pages/MovieDetails";
 import { Loading } from "notiflix/build/notiflix-loading-aio";
+import NavigateBackButton from "components/NavigateBackButton";
+import MovieDetailsNavigation from "components/MovieDetailsNavigation";
 
 export default function MovieDetailsPage (){
   const { movieID } = useParams();
@@ -26,7 +26,7 @@ export default function MovieDetailsPage (){
     });
 
     fetchFilmDetails(movieID).then((data) => {
-      setMovieData(movieDetails(data));
+      setMovieData(MovieDetailsItem(data));
     });
     Loading.remove();
   }, [movieID]);
