@@ -1,6 +1,6 @@
-import { filteredGenres } from "utils/filteredGenres";
+import { filteredGenres } from "./filteredGenres";
 
-export const mappedMovies = (genresList, list) =>
+export const mappedMoviesList = (genresList, list) =>
   list.map((item) => ({
     id: item.id,
     title: item.title,
