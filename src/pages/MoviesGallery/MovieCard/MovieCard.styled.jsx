@@ -41,7 +41,8 @@ export const Title = styled.h3`
 `;
 
 export const Genres = styled.p`
-  margin-top: 4px;
+  margin-top: 8px;
+  padding-top: 5px;
   font-size: 12px;
   line-height: 12px / 14px;
   font-weight: 500;
