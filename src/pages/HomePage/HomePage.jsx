@@ -1,11 +1,10 @@
 import { fetchTrends } from "Services/movieApi";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import MoviesGallery from "components/MoviesGallery";
-import { mappedMovies } from "utils/mappedMoviesList";
+import MoviesGallery from "../MoviesGallery/MoviesGallery";
+import { mappedMoviesList } from "utils/mappedMoviesList";
 import Container from "UI/container";
 import Section from "UI/section";
-
 
 export default function HomePage({ genresList }) {
   const [moviesList, setMoviesList] = useState([]);
@@ -13,7 +12,7 @@ export default function HomePage({ genresList }) {
   useEffect(() => {
     if (genresList.length)
       fetchTrends().then((data) => {
-        setMoviesList(mappedMovies(genresList, data.results));
+        setMoviesList(mappedMoviesList(genresList, data.results));
       });
   }, [genresList]);
 
@@ -34,4 +33,3 @@ HomePage.propTypes = {
     })
   ).isRequired,
 };
-
