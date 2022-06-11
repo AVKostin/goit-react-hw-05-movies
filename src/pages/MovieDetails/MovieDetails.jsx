@@ -82,3 +82,5 @@ MovieDetails.propTypes = {
   genres: PropTypes.string,
   poster_path: PropTypes.string,
 };
+
+export default MovieDetails;
