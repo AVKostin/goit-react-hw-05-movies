@@ -1,33 +1,33 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import PropTypes from "prop-types";
-import { fetchSearch } from "Services/movieApi";
-import MoviesGallery from "components/MoviesGallery";
-import Container from "UI/container";
 import Section from "UI/section";
+import Container from "UI/container";
 import SearchBar from "components/SearchBar";
-import { Loading } from "notiflix/build/notiflix-loading-aio";
+import { fetchSearch } from "Services/movieApi";
+import { mappedMoviesList } from "utils/mappedMoviesList";
+import MoviesGallery from "../MoviesGallery/MoviesGallery";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
-import { mappedMovies } from "utils/mappedMoviesList";
+import { Loading } from "notiflix/build/notiflix-loading-aio";
 
 const PARAM_QUERY = "query";
 
-Notify.init({
-	position: 'center-top',
-	width: '400px',
-  fontSize: '18px',
-  cssAnimationStyle: "from-left",
-});
+    Notify.init({
+      position: 'center-top',
+      width: '400px',
+      fontSize: '18px',
+      cssAnimationStyle: "from-left",
+    });
 
-export default function MoviePage({ genresList, query  }){
+export default function MoviePage({ genresList }){
   const [moviesList, setMoviesList] = useState([]);
   const [queryParam, setQueryParam] = useSearchParams({});
 
   useEffect(() => {
-
     const query = queryParam.get(PARAM_QUERY);
     if (query) handleSearch(query);
-  }, [query]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSearch = (query) => {
     setQueryParam({ [PARAM_QUERY]: query });
@@ -45,18 +45,17 @@ export default function MoviePage({ genresList, query  }){
         if (data.results.length === 0) {
           Notify.failure("Sorry nothing found on your query");
         }
-
-        setMoviesList(mappedMovies(genresList, data.results));
+      setMoviesList(mappedMoviesList(genresList, data.results));
       })
       .catch((err) => {
         console.error(err);
       });
-
     Loading.remove();
   };
 
   return (
     <Section>
+
       <Container>
         <SearchBar onSearch={handleSearch} />
       </Container>
@@ -64,6 +63,7 @@ export default function MoviePage({ genresList, query  }){
       <Container>
         <MoviesGallery list={moviesList} />
       </Container>
+
     </Section>
   );
 };
@@ -76,4 +76,3 @@ MoviePage.propTypes = {
     })
   ),
 };
-
