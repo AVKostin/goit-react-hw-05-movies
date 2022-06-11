@@ -1,4 +1,11 @@
 export { getGenres } from './getGenres';
-export { checkAvatarPath } from './checkAvatarPath';
-export { checkProfilePhoto } from './checkProfilePhoto';
+export { mappedCast } from './mappedCast';
 export { checkPoster } from './checkPoster';
+export { mappedReviews } from './mappedReviews';
+export { filteredGenres } from './filteredGenres';
+export { checkAvatarPath } from './checkAvatarPath';
+export { MovieDetailsItem } from './movieDetailsItem';
+export { handleAvatarLink } from './handleAvatarLink';
+export { mappedMoviesList } from './mappedMoviesList';
+export { mappedGenreNames } from './mappedGenreNames';
+export { checkProfilePhoto } from './checkProfilePhoto';
