@@ -1,8 +1,6 @@
 import { Notify } from "notiflix/build/notiflix-notify-aio";
-import axios from 'axios';
-
-const BASE_URL = "https://api.themoviedb.org/3";
-const api_key = "b3b50e370b6b6fb5970e86b3e5ccd8d7";
+import { api_key } from '../constants';
+import { BASE_URL } from '../constants';
 
 Notify.init({
 	position: 'center-top',
@@ -85,14 +83,4 @@ export const fetchSearch = async (query) => {
   } catch (error) {
     Notify.failure("Oops, an error occurred");
   }
-};
-
-export const fetchMovieById = async id => {
-  const response = await axios.get(`/movie/${id}`);
-  return response.data;
-};
-
-export const fetchTrendingMovies = async () => {
-  const response = await axios.get('/trending/movie/day');
-  return response.data;
 };
