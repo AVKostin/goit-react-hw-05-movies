@@ -1,4 +1,4 @@
-import { Wrapper } from "./section.module";
+import { Wrapper } from "./section.styled";
 
 export default function Section({ children }) {
   return <Wrapper>{children}</Wrapper>;
