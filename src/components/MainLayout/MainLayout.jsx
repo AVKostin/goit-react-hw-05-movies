@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import {Main} from "./MainLayout.module";
+import {Main} from "./MainLayout.styled";
 import { ScrollToTop } from "react-to-top";
 import AppHeader from "../AppHeader";
 

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { breakpoints } from "utils/breakpoints";
+import { breakpoints } from "utils/breakPoints";
 
 export const Wrapper = styled.nav`
   display: flex;

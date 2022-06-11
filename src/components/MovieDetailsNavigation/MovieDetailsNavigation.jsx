@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { LinksMenu, LinksItem } from "./MovieDetailsNavigation.module";
+import { LinksMenu, LinksItem } from "./MovieDetailsNavigation.styled";
 
 import CustomLink from "./CustomLink";
 

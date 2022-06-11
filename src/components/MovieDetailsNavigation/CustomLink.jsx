@@ -1,5 +1,5 @@
 import { useMatch, useResolvedPath } from "react-router-dom";
-import { StyledLink } from "./CustomLink.module";
+import { StyledLink } from "./CustomLink.styled";
 
 export default function CustomLink({ children, to, ...props }) {
   let resolved = useResolvedPath(to);
