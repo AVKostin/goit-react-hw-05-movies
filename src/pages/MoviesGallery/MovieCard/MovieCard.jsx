@@ -4,7 +4,8 @@ import { URL_POSTER } from '../../../constants'
 import NoPoster from "../../Cast/CastItem/No-photo-m.png";
 import { CardsDescription, RatingAccent, RatingCards } from '../../MovieDetails/MovieDetails.styled'
 
-export const MovieCard = ({ title,  release_date, poster_path, genres, vote_average }) => {
+export const MovieCard = (data) => {
+  const { title, release_date, poster_path, genres, vote_average } = data;
   return (
     <>
       <Wrapper>
@@ -30,11 +31,11 @@ export const MovieCard = ({ title,  release_date, poster_path, genres, vote_aver
           )}
         </Thumb>
           <CardsDescription>
-            <Title>{title}<span> | </span>{2022}</Title>
+            <Title>{title}<span> | </span>{release_date}</Title>
             <RatingCards>
               <Genres>{genres}</Genres>
-                <RatingAccent>{5.2}</RatingAccent>
-                </RatingCards>
+                <RatingAccent>{vote_average}</RatingAccent>
+            </RatingCards>
           </CardsDescription>
       </Wrapper>
     </>
@@ -44,8 +45,8 @@ export const MovieCard = ({ title,  release_date, poster_path, genres, vote_aver
 MovieCard.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  poster_path: PropTypes.string,
-  genres: PropTypes.string,
+  poster_path: PropTypes.string.isRequired,
+  genres: PropTypes.string.isRequired,
   release_date: PropTypes.number.isRequired,
   vote_average: PropTypes.number.isRequired,
 };
