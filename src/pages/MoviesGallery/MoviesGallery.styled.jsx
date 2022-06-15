@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "utils/breakPoints";
+import { breakpoints } from "../../utils/breakPoints";
 
 export const Wrapper = styled.ul`
   display: grid;
