@@ -11,8 +11,9 @@ export default function HomePage({ genresList }) {
 
   useEffect(() => {
     if (genresList.length)
-      fetchTrends().then((data) => {
-        setMoviesList(mappedMoviesList(genresList, data.results));
+      fetchTrends()
+        .then((data) => {
+          setMoviesList(mappedMoviesList(genresList, data.results));
       });
   }, [genresList]);
 
