@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "utils/breakPoints";
+import { breakpoints } from "../../../utils/breakPoints";
 
 export const Wrapper = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.3);
