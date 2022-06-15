@@ -34,12 +34,12 @@ export default function App () {
       {Loading.remove()}
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage genresList={genresList} />} />
-          <Route path="movies/:movieID/*" element={<MovieDetailsPage />} />
-          <Route
-            path="movies"
-            element={<MoviesPage genresList={genresList} />}
-          />
+        <Route index element={<HomePage genresList={genresList} />} />
+        <Route path="movies/:movieID/*" element={<MovieDetailsPage />} />
+        <Route
+          path="movies"
+          element={<MoviesPage genresList={genresList} />}
+        />
         </Route>
       </Routes>
     </Suspense>
