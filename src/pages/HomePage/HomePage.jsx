@@ -1,4 +1,4 @@
-import { fetchTrends } from "Services/movieApi";
+import { fetchTrends } from "../../Services/movieApi";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import MoviesGallery from "../MoviesGallery/MoviesGallery";
