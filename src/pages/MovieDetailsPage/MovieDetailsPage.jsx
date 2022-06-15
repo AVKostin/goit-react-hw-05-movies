@@ -3,7 +3,7 @@ import { Routes, Route, Outlet, useParams } from "react-router-dom";
 import Cast from "../Cast";
 import Reviews from "../Reviews";
 import Section from "UI/section";
-import Trailers from "../Trailer";
+import Trailers from "./Trailer";
 import Container from "UI/container";
 import { MovieDetailsItem } from "utils/movieDetailsItem";
 import { fetchFilmDetails } from "Services/movieApi";
@@ -25,10 +25,13 @@ export default function MovieDetailsPage (){
       messageColor: "#00FF00",
     });
 
-    fetchFilmDetails(movieID).then((data) => {
-      setMovieData(MovieDetailsItem(data));
+    fetchFilmDetails(movieID)
+      .then((data) => {
+        setMovieData(MovieDetailsItem(data));
     });
+
     Loading.remove();
+
   }, [movieID]);
 
   return (
