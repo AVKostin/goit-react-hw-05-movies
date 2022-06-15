@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Loading } from "notiflix/build/notiflix-loading-aio";
 import CastItem from "./CastItem";
-import { fetchCast } from "Services/movieApi";
-import { mappedCast } from "utils/mappedCast";
+import { fetchCast } from "../../Services/movieApi";
+import { mappedCast } from "../../utils/mappedCast";
 import noCredits from "./no-image-available.png";
 import { List, Item } from './Cast.styled'
 

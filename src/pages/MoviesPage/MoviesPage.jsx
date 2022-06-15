@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import PropTypes from "prop-types";
-import Section from "UI/section";
-import Container from "UI/container";
-import SearchBar from "components/SearchBar";
-import { fetchSearch } from "Services/movieApi";
-import { mappedMoviesList } from "utils/mappedMoviesList";
+import Section from "../../UI/section";
+import Container from "../../UI/container";
+import SearchBar from "../../components/SearchBar";
+import { fetchSearch } from "../../Services/movieApi";
+import { mappedMoviesList } from "../../utils/mappedMoviesList";
 import MoviesGallery from "../MoviesGallery/MoviesGallery";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 import { Loading } from "notiflix/build/notiflix-loading-aio";

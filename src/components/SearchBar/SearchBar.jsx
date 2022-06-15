@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form, Input } from "./SearchBar.styled";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
-import AccentButton from "UI/AccentButton";
+import AccentButton from "../../UI/AccentButton";
 
 Notify.init({
 	position: 'center-top',

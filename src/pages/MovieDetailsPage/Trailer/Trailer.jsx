@@ -3,7 +3,7 @@ import Iframe from "react-iframe";
 import PropTypes from "prop-types";
 import { List } from "./Trailer.styled";
 import noTrailer from "./no-trailer.png";
-import { fetchFilmVideo } from "Services/movieApi";
+import { fetchFilmVideo } from "../../../Services/movieApi";
 import { Loading } from "notiflix/build/notiflix-loading-aio";
 
 export default function Trailers({ id }) {

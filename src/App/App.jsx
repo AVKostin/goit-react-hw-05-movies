@@ -2,7 +2,7 @@ import { lazy, Suspense, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../components/MainLayout";
 import { Loading } from "notiflix/build/notiflix-loading-aio";
-import { fetchGenres } from "Services/movieApi";
+import { fetchGenres } from "../Services/movieApi";
 
 const HomePage = lazy(() =>
   import("pages/HomePage" /* webpackChunkName: "home-view" */)
@@ -18,8 +18,11 @@ export default function App () {
   const [genresList, setGenresList] = useState([]);
 
   useEffect(() => {
-    fetchGenres().then((data) => setGenresList(data.genres));
+    fetchGenres()
+      .then((data) => setGenresList(data.genres));
   }, []);
+
+console.log('genresList: ', genresList);
 
   return (
     <Suspense

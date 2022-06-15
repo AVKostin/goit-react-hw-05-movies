@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Wrapper, Item } from "./MoviesGallery.styled";
-import { MovieCard }  from "../MoviesGallery/MovieCard";
+import  MovieCard  from "../MoviesGallery/MovieCard";
 
 
 export default function MoviesGallery ({ list }){

@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Loading } from "notiflix/build/notiflix-loading-aio";
 import ReviewItem from "./ReviewItem";
-import { fetchReviews } from "Services/movieApi";
-import { mappedReviews } from "utils/mappedReviews";
+import { fetchReviews } from "../../Services/movieApi";
+import { mappedReviews } from "../../utils/mappedReviews";
 import noData from "./no-review-found.png";
 import { List, Item } from "./Reviews.styled";
 

@@ -2,9 +2,9 @@ import { fetchTrends } from "Services/movieApi";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import MoviesGallery from "../MoviesGallery/MoviesGallery";
-import { mappedMoviesList } from "utils/mappedMoviesList";
-import Container from "UI/container";
-import Section from "UI/section";
+import { mappedMoviesList } from "../../utils/mappedMoviesList";
+import Container from "../../UI/container";
+import Section from "../../UI/section";
 
 export default function HomePage({ genresList }) {
   const [moviesList, setMoviesList] = useState([]);
