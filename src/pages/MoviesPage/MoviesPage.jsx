@@ -42,6 +42,7 @@ export default function MoviePage({ genresList }){
 
     fetchSearch(query)
       .then((data) => {
+        console.log(data.results);
         if (data.results.length === 0) {
           Notify.failure("Sorry nothing found on your query");
         }
