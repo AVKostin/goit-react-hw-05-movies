@@ -4,8 +4,9 @@ import { URL_POSTER } from '../../constants'
 import noPoster from "../Cast/";
 import { Wrapper, Thumb, Information, Title, Details, Table, Head, Data, Rating, RatingAccent, AboutSubtitle, Overview } from "./MovieDetails.styled";
 
-export const MovieDetails = ({ title, genres, overview, vote_count, popularity, poster_path, vote_average, release_date, backdrop_path, original_title
-}) => {
+export const MovieDetails = ({ data }) => {
+  const { title, genres, overview, vote_count, popularity, poster_path, vote_average, release_date, backdrop_path, original_title
+  } = data;
 
   return (
   <>
