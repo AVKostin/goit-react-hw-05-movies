@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "utils/breakPoints";
+import { breakpoints } from "../../utils/breakPoints";
 
 export const Wrapper = styled.div`
   @media ${breakpoints.tablet} {
@@ -23,7 +23,6 @@ export const Thumb = styled.div`
     }
   }
 `;
-
 
 export const Information = styled.div`
   margin-left: 10px;
