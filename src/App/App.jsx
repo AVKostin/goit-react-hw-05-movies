@@ -5,13 +5,13 @@ import { Loading } from "notiflix/build/notiflix-loading-aio";
 import { fetchGenres } from "../Services/movieApi";
 
 const HomePage = lazy(() =>
-  import("pages/HomePage" /* webpackChunkName: "home-view" */)
+  import("../pages/HomePage" /* webpackChunkName: "home-view" */)
 );
 const MoviesPage = lazy(() =>
-  import("pages/MoviesPage" /* webpackChunkName: "movies-view" */)
+  import("../pages/MoviesPage" /* webpackChunkName: "movies-view" */)
 );
 const MovieDetailsPage = lazy(() =>
-  import("pages/MovieDetailsPage" /* webpackChunkName: "movie-details-view" */)
+  import("../pages/MovieDetailsPage" /* webpackChunkName: "movie-details-view" */)
 );
 
 export default function App () {
