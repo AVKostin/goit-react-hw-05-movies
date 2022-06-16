@@ -7,11 +7,17 @@ export default function MovieDetailsNavigation({ id }) {
   return (
     <LinksMenu>
       <LinksItem>
-        <CustomLink to={`/movies/${id}/credits`}>Credits</CustomLink>
+          <CustomLink to={`/movies/${id}/credits`}>Credits</CustomLink>
       </LinksItem>
+
       <LinksItem>
         <CustomLink to={`/movies/${id}/reviews`}>Reviews</CustomLink>
       </LinksItem>
+
+      <LinksItem>
+        <CustomLink to={`/movies/${id}/trailer`}>Trailer</CustomLink>
+      </LinksItem>
+
       </LinksMenu>
   );
 };
