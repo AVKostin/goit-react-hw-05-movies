@@ -6,7 +6,8 @@ export default function CustomLink({ children, to, ...props }) {
   let match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <StyledLink className={match ? "active" : null} to={to} {...props}>
+    <StyledLink className={match ? "active" : null}
+      to={to} {...props}>
       {children}
     </StyledLink>
   );
