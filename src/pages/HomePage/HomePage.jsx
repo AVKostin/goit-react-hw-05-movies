@@ -11,19 +11,20 @@ export default function HomePage({ genresList }) {
 
   useEffect(() => {
     if (genresList.length)
-      fetchTrends()
-        .then((data) => {
+      fetchTrends().then((data) => {
           setMoviesList(mappedMoviesList(genresList, data.results));
       });
   }, [genresList]);
 
-  return (
+  return <>
     <Section>
       <Container>
         <MoviesGallery list={moviesList} />
       </Container>
     </Section>
-  );
+  </>
+
+
 };
 
 HomePage.propTypes = {
