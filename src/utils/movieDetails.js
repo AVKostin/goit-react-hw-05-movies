@@ -1,6 +1,6 @@
-import { mappedGenreNames } from "./mappedGenreNames";
+import { mappedGenreNames } from './mappedGenreNames';
 
-export const movieDetails = (item) => ({
+export const movieDetails = item => ({
   id: item.id,
   title: item.title,
   quote: item.tagline,
@@ -9,8 +9,8 @@ export const movieDetails = (item) => ({
   vote_count: item.vote_count,
   poster_path: item.poster_path,
   vote_average: item.vote_average,
+  release_date: item.release_date,
   backdrop_path: item.backdrop_path,
   original_title: item.original_title,
-  release_date: parseInt(item.release_date),
   genres: mappedGenreNames(item.genres),
 });
