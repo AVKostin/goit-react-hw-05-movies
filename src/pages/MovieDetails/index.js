@@ -1,2 +1,2 @@
-export { MovieDetails } from './MovieDetails';
+export { default } from './MovieDetails';
 // export { MovieDetailsInfo } from '../MovieDetails';
