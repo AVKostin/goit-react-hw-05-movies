@@ -4,13 +4,20 @@ import { URL_POSTER } from '../../constants'
 import noPoster from "../Cast/";
 import { Wrapper, Thumb, Information, Title, Details, Table, Head, Data, Rating, RatingAccent, AboutSubtitle, Overview } from "./MovieDetails.styled";
 
-export const MovieDetails = ({ data }) => {
-  const { title, genres, overview, vote_count, popularity, poster_path, vote_average, release_date, backdrop_path, original_title
-  } = data;
-
-  return (
-  <>
-    <Wrapper>
+export const MovieDetails = ({
+  title,
+  genres,
+  overview,
+  vote_count,
+  popularity,
+  poster_path,
+  vote_average,
+  release_date,
+  backdrop_path,
+  original_title,
+}) => {
+  return <>
+      <Wrapper>
       <Thumb>
         {poster_path !== null ? (
           <picture>
@@ -41,8 +48,8 @@ export const MovieDetails = ({ data }) => {
               <tr>
                 <Head>Vote / Votes:</Head>
                 <Data>
-                  <Rating>{vote_average}</Rating> /{' '}
-                  <RatingAccent>{vote_count}</RatingAccent>
+                  <RatingAccent>{vote_average}</RatingAccent>/{' '}
+                  <Rating>{vote_count}</Rating>
                 </Data>
               </tr>
               <tr>
@@ -72,12 +79,12 @@ export const MovieDetails = ({ data }) => {
       </Wrapper>
       <Outlet />
   </>
-  );
-};
+
+  };
 
 MovieDetails.propTypes = {
-  title: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
+  // quote: PropTypes.string.isRequired,
   release_date: PropTypes.number,
   overview: PropTypes.string,
   genres: PropTypes.string,
