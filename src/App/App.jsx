@@ -19,10 +19,10 @@ export default function App () {
 
   useEffect(() => {
     fetchGenres()
-      .then((data) => setGenresList(data.genres));
+      .then((data) =>
+        setGenresList(data.genres));
   }, []);
 
-console.log('genresList: ', genresList);
 
   return (
     <Suspense
@@ -39,9 +39,7 @@ console.log('genresList: ', genresList);
         <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage genresList={genresList} />} />
         <Route path="movies/:movieID/*" element={<MovieDetailsPage />} />
-        <Route
-          path="movies"
-          element={<MoviesPage genresList={genresList} />}
+        <Route path="movies" element={<MoviesPage genresList={genresList} />}
         />
         </Route>
       </Routes>
