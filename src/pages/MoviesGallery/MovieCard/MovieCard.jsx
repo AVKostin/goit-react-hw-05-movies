@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { Wrapper, Thumb, Picture, Title, Genres } from "./MovieCard.styled";
-import { URL_POSTER } from '../../../constants'
+import { URL_POSTER } from '../../../constants/index'
 import NoPoster from "../../Cast/CastItem/No-photo-m.png";
 import { CardsDescription, RatingAccent, RatingCards } from '../../MovieDetails/MovieDetails.styled'
 
-export const MovieCard = ({ title, release_date, poster_path, genres, vote_average }) => {
+export default function MovieCard({ title, release_date, poster_path, genres, vote_average }) {
   return (
     <>
       <Wrapper>
@@ -30,10 +30,10 @@ export const MovieCard = ({ title, release_date, poster_path, genres, vote_avera
           )}
         </Thumb>
         <CardsDescription>
-          <Title>{title}<span> | </span>{2022}</Title>
+          <Title>{title}<span> | </span>{release_date}</Title>
           <RatingCards>
             <Genres>{genres}</Genres>
-            <RatingAccent>{5.2}</RatingAccent>
+            <RatingAccent>{vote_average}</RatingAccent>
           </RatingCards>
         </CardsDescription>
       </Wrapper>
@@ -49,5 +49,3 @@ MovieCard.propTypes = {
   release_date: PropTypes.number.isRequired,
   vote_average: PropTypes.number.isRequired,
 };
-
-export default MovieCard;
