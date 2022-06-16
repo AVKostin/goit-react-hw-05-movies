@@ -46,7 +46,7 @@ export const Title = styled.h2`
   font-family: "Comfortaa", sans-serif;
   padding-left:10px;
     @media ${breakpoints.tablet} {
-       margin-bottom: 15px;
+      margin-bottom: 15px;
   }
 
     @media ${breakpoints.laptop} {
@@ -118,7 +118,7 @@ export const RatingCards = styled.span`
 
 
 export const RatingAccent = styled.span`
-  padding: 5px 10px;
+  padding: 2px 5px;
   margin-right: 5px;
   color: #000;
   background-color: #f7f7f7;
@@ -129,6 +129,7 @@ export const RatingAccent = styled.span`
   letter-spacing: 0;
   color: #fff;
   background-color: #ff6b08;
+  height: 22px;
 `;
 
 export const AboutSubtitle = styled.p`
