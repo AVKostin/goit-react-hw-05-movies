@@ -1,10 +1,10 @@
 export { getGenres } from './getGenres';
 export { mappedCast } from './mappedCast';
 export { checkPoster } from './checkPoster';
+export { movieDetails } from './movieDetails';
 export { mappedReviews } from './mappedReviews';
 export { filteredGenres } from './filteredGenres';
 export { checkAvatarPath } from './checkAvatarPath';
-export { MovieDetailsItem } from './movieDetailsItem';
 export { handleAvatarLink } from './handleAvatarLink';
 export { mappedMoviesList } from './mappedMoviesList';
 export { mappedGenreNames } from './mappedGenreNames';
