@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Button } from "./AccentButton.module";
+import { Button } from "./AccentButton.styled";
 
 const AccentButton = ({ icon, title, onClick, type }) => (
   <Button type={type} onClick={onClick}>
