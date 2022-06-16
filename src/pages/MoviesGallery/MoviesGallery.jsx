@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Wrapper, Item } from "./MoviesGallery.styled";
-import  MovieCard  from "../MoviesGallery/MovieCard";
-
+import  MovieCard  from "../MoviesGallery/MovieCard/";
 
 export default function MoviesGallery ({ list }){
   const location = useLocation();
@@ -24,11 +23,8 @@ MoviesGallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      poster_path: PropTypes.string,
+      posterPath: PropTypes.string,
       genres: PropTypes.string,
-      release_date: PropTypes.number.isRequired,
-      vote_average: PropTypes.number.isRequired,
     })
   ),
 };
-
