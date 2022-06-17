@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Outlet } from 'react-router-dom';
 import { URL_POSTER } from '../../constants'
-import noPoster from "../Cast/";
+import noPoster from "../Cast/CastItem/No-photo-m.png";
 import { Wrapper, Thumb, Information, Title, Details, Table, Head, Data, Rating, RatingAccent, AboutSubtitle, Overview } from "./MovieDetails.styled";
 
 export const MovieDetails = ({
