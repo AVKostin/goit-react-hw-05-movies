@@ -72,7 +72,7 @@ export const fetchReviews = async (id) => {
 export const fetchSearch = async (query) => {
   try {
     const searchParams = new URLSearchParams({
-      api_key: "api_key",
+      api_key: "b3b50e370b6b6fb5970e86b3e5ccd8d7",
       query: query,
       language: "en-US",
       include_adult: false,
