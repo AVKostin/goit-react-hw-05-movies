@@ -10,7 +10,7 @@ Notify.init({
   cssAnimationStyle: "from-right"
 });
 
-export default function SearchForm({ onSearch }){
+const SearchForm = ({ onSearch }) => {
   const [value, setValue] = useState("");
 
   const handleSearch = (e) => {
@@ -26,14 +26,17 @@ export default function SearchForm({ onSearch }){
     }
   };
 
-  return (
-    <Form onSubmit={handleSearch}>
-      <Input
-        value={value}
-        placeholder="Search for movies"
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <AccentButton title="Find" type="submit" />
-    </Form>
-  );
+  return <>
+      <Form onSubmit={handleSearch}>
+        <Input
+          value={value}
+          placeholder="Search for movies"
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <AccentButton title="Find" type="submit" />
+      </Form>
+    </>
+
 };
+
+export default SearchForm;
