@@ -1,28 +1,27 @@
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { Wrapper } from "./NavigateBackButton.styled";
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Wrapper } from './NavigateBackButton.styled';
 
-import AccentButton from "../../UI/AccentButton";
+import AccentButton from '../../UI/AccentButton';
 
-export default function NavigateBackButton
- () {
-  const navigate = useNavigate();
-  const { state } = useLocation();
+export default function NavigateBackButton() {
+	const navigate = useNavigate();
+	const { state } = useLocation();
 
-  const [from, setFrom] = useState("");
+	const [from, setFrom] = useState('');
 
-  useEffect(() => {
-    if (state?.from) {
-      const { pathname, search } = state.from;
-      setFrom(`${pathname}${search}`);
-    }
-  }, [state?.from]);
+	useEffect(() => {
+		if (state?.from) {
+			const { pathname, search } = state.from;
+			setFrom(`${pathname}${search}`);
+		}
+	}, [state?.from]);
 
-  const handleBack = () => navigate(from);
+	const handleBack = () => navigate(from);
 
-  return (
-    <Wrapper>
-      <AccentButton title="Back" onClick={handleBack} type="button" />
-    </Wrapper>
-  );
-};
+	return (
+		<Wrapper>
+			<AccentButton title="Back" onClick={handleBack} type="button" />
+		</Wrapper>
+	);
+}
