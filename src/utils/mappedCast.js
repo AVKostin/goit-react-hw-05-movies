@@ -4,4 +4,5 @@ export const mappedCast = (list) =>
     name: item.name,
     character: item.character,
     photo: item.profile_path,
-  }));
+  })
+);

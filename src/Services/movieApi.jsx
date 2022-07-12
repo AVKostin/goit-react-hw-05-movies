@@ -14,7 +14,8 @@ export const fetchTrends = async () => {
     const url = `${BASE_URL}/trending/movie/week?api_key=${api_key}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };
@@ -24,7 +25,8 @@ export const fetchGenres = async () => {
     const url = `${BASE_URL}/genre/movie/list?api_key=${api_key}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };
@@ -34,7 +36,8 @@ export const fetchFilmDetails = async (id) => {
     const url = `${BASE_URL}/movie/${id}?api_key=${api_key}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };
@@ -44,7 +47,8 @@ export const fetchFilmVideo = async (id) => {
     const url = `${BASE_URL}/movie/${id}/videos?api_key=${api_key}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };
@@ -54,7 +58,8 @@ export const fetchCast = async (id) => {
     const url = `${BASE_URL}/movie/${id}/credits?api_key=${api_key}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };
@@ -64,7 +69,8 @@ export const fetchReviews = async (id) => {
     const url = `${BASE_URL}/movie/${id}/reviews?api_key=${api_key}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };
@@ -80,7 +86,8 @@ export const fetchSearch = async (query) => {
     const url = `${BASE_URL}/search/movie?${searchParams}`;
     const response = await fetch(url);
     return response.json();
-  } catch (error) {
+  }
+  catch (error) {
     Notify.failure("Oops, an error occurred");
   }
 };

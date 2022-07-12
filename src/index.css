@@ -14,9 +14,11 @@ html {
 li {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 a,
 button {
   cursor: pointer;
