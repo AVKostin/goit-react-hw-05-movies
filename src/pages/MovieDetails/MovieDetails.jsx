@@ -3,18 +3,18 @@ import { Outlet } from 'react-router-dom';
 import { URL_POSTER } from '../../constants';
 import noPoster from '../Cast/CastItem/No-photo-m.png';
 import {
-	Wrapper,
-	Thumb,
-	Information,
-	Title,
-	Details,
-	Table,
-	Head,
 	Data,
+	Head,
+	Thumb,
+	Title,
+	Table,
 	Rating,
+	Details,
+	Wrapper,
+	Overview,
+	Information,
 	RatingAccent,
 	AboutSubtitle,
-	Overview,
 } from './MovieDetails.styled';
 
 export default function MovieDetails({

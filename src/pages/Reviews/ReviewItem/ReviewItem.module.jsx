@@ -33,7 +33,7 @@ export const Text = styled.p`
   text-align: justify;
 
   font-family: "Comfortaa", sans-serif;
-      @media ${breakpoints.laptop} {
+    @media ${breakpoints.laptop} {
         font-size: 16px;
   }
 `;

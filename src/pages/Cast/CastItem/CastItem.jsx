@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { Wrapper, Photo, NoPhoto, Title, Subtitle } from "./CastItem.styled";
-import { URL_POSTER } from '../../../constants/index'
 import noPhoto from "../CastItem/No-photo-m.png";
+import { URL_POSTER } from '../../../constants/index'
+import { Wrapper, Photo, NoPhoto, Title, Subtitle } from "./CastItem.styled";
 
 export default function CastItem({ name, character, photo }) {
   return (

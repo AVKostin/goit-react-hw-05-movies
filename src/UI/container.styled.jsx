@@ -6,14 +6,13 @@ export const Wrapper = styled.div`
     padding: 0 20px;
         @media ${breakpoints.mobile} {
             max-width: 400px;
-}
-
-    @media ${breakpoints.tablet} {
-        min-width: 768px;
-        padding: 0 70px;
-}
-    @media ${breakpoints.laptop} {
-        min-width: 1024px;
-        padding: 0 30px;
-}
+        }
+        @media ${breakpoints.tablet} {
+            min-width: 768px;
+            padding: 0 70px;
+        }
+        @media ${breakpoints.laptop} {
+            min-width: 1024px;
+            padding: 0 30px;
+        }
 `;

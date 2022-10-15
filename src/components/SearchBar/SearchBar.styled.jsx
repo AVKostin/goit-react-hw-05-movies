@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Form = styled.form`
   display: flex;
   justify-content: center;
@@ -10,7 +9,6 @@ export const Form = styled.form`
 export const Input = styled.input`
   width: 280px;
   margin-right: 10px;
-
   background-color: "#ffffff";
   padding-left: 20px;
   font-size: 20px;

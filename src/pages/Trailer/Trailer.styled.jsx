@@ -11,9 +11,8 @@ export const List = styled.ul`
             grid-template-columns: 1fr 1fr;
     }
         @media ${breakpoints.laptop} {
-        grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
     }
-
     & img {
         margin-top: 10px;
         border-radius: 20px;
