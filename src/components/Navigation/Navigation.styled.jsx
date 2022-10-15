@@ -33,7 +33,6 @@ export const Title = styled.h1`
 
 export const Menu = styled.ul`
   display: flex;
-  // margin-left: auto;
 `;
 
 export const Item = styled.li`
