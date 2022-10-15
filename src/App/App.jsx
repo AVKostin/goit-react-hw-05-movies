@@ -1,8 +1,8 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MainLayout from '../components/MainLayout';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { fetchGenres } from '../Services/movieApi';
+import MainLayout from '../components/MainLayout';
 
 const HomePage = lazy(() =>
 	import('../pages/HomePage' /* webpackChunkName: "home-view" */)
